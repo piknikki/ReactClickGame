@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Peep'n",
+    "image": "/images/img1.png",
+    "alreadyChosenIds": false
+  },
+  {
+    "id": 2,
+    "name": "Wanderin'",
+    "image": "/images/img2.png",
+    "alreadyChosenIds": false
+  },
+  {
+    "id": 3,
+    "name": "Fishin'",
+    "image": "/images/img3.png",
+    "alreadyChosenIds": false
+  },
+  {
+    "id": 4,
+    "name": "Navigate'n",
+    "image": "/images/img4.png",
+    "alreadyChosenIds": false
+  },
+  {
+    "id": 5,
+    "name": "Firin'",
+    "image": "/images/img5.png",
+    "alreadyChosenIds": false
+  },
+  {
+    "id": 6,
+    "name": "Hike'n",
+    "image": "/images/img6.png",
+    "alreadyChosenIds": false
+  },
+  {
+    "id": 7,
+    "name": "Shelter'n",
+    "image": "/images/img7.png",
+    "alreadyChosenIds": false
+  },
+  {
+    "id": 8,
+    "name": "Whittlin'",
+    "image": "/images/img8.png",
+    "alreadyChosenIds": false
+  },
+  {
+    "id": 9,
+    "name": "Axe'n",
+    "image": "/images/img9.png",
+    "alreadyChosenIds": false
+  },
+  {
+    "id": 10,
+    "name": "Findin' Frens",
+    "image": "/images/img10.png",
+    "alreadyChosenIds": false
+  },
+  {
+    "id": 11,
+    "name": "Um.",
+    "image": "/images/img11.png",
+    "alreadyChosenIds": false
+  },
+  {
+    "id": 12,
+    "name": "Where the F is camp??",
+    "image": "/images/img12.png",
+    "alreadyChosenIds": false
+  }
+]
