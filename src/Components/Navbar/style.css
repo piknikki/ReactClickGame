@@ -1,0 +1,16 @@
+
+.navbar {
+    padding-top: 10px;
+}
+.clickyNav {
+    width: 100%;
+    background-color: #4b7182;
+    border-bottom: 3px solid black;
+    padding-bottom: 20px;
+}
+
+.navbar-item {
+    padding-left: 20px;
+    padding-right: 20px;
+
+}

@@ -8,9 +8,9 @@ function FriendCard(props) {
                 <img
                     alt={props.name}
                     src={props.image}
+                    onClick={() => props.handleSelect(props.id)}
                 />
             </div>
-            <span className="remove" onClick={() => props.handleSelect(props.id)}>x</span>
         </div>
 
     );

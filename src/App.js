@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import FriendCard from "./components/FriendCard";
-import Wrapper from "./components/Wrapper";
-import Title from "./components/Title";
-import Navbar from "./components/Navbar";
+import FriendCard from "./Components/FriendCard/";
+import Wrapper from "./Components/Wrapper";
+import Title from "./Components/Title";
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
 import './App.css';
 
 import friends from "./friends"
@@ -13,7 +14,7 @@ class App extends Component {
     score: 0,
     topScore: 0,
     alreadyChosenIds: [],
-    correct: ""
+    round: ""
   }
 
   // thank you, google, for this shuffle thing
@@ -36,20 +37,20 @@ class App extends Component {
 
 
   handleSelect = (id) => {
-    if (this.state.alreadyChosenIds.indexOf(id) === 1) { // if the specific id is not in the array of chosen ids
+    if (this.state.alreadyChosenIds.indexOf(id) === -1) { // if the specific id is not in the array of chosen ids
       this.handleScoring(); // run this function right now
       this.setState({alreadyChosenIds: this.state.alreadyChosenIds.concat(id)}); // add this id
     } else {
       if (this.state.alreadyChosenIds.indexOf(id) >= 0) {
-        this.setState({correct: "Doh!  You clicked something twice!  New game..."});
+        this.setState({round: "Doh!  You clicked something twice!  New round..."});
         this.handleEndOfGame();
       }
     }
   }
 
   handleScoring = () => {
-    this.setState({correct: "Yeah Boiiiiii!"});
-    const theScore = this.state.score + 1; // not directly setting state
+    this.setState({round: "  Yeah Boiiiiii!"}); // this shows if you got it right
+    const theScore = this.state.score + 1; // tracking score without directly setting state
     this.setState({score: theScore}) // set the score to theScore
     if (theScore > this.state.topScore) {
       this.setState({topScore: theScore}); // if your score is higher than the top score, reset the top score
@@ -74,12 +75,22 @@ class App extends Component {
 
   render() {
     return (
-        <div>
+        <div className="container">
+          <Navbar>
+
+            <div className="row">
+              <span id="score" className="navbar-item">Score: {this.state.score} </span>{" "}
+              <span id="topScore" className="navbar-item">Top Score: {this.state.topScore} </span>
+              {" "}
+            </div>
+            <div className="row">
+              <span id="round" className="navbar-item">This round: {this.state.round} </span>
+            </div>
+          </Navbar>
+
+          <Title />
+
           <Wrapper>
-            <Navbar ></Navbar>
-              <Title><h1 className="title">Memory Game</h1></Title>
-            <p>Directions: Click on any image. After you click, the images will shuffle. Don't click on anything more than once.
-            </p>
 
             {this.state.friends.map(friend => (
                 <FriendCard
@@ -87,11 +98,10 @@ class App extends Component {
                     image={friend.image}
                     id={friend.id}
                     key={friend.id}
-                    handleDelete={this.handleSelect}
+                    handleSelect={this.handleSelect}
                 />
             ))}
-
-
+            <Footer />
           </Wrapper>
         </div>
     );

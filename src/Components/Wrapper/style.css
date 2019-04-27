@@ -1,0 +1,9 @@
+.wrapper {
+    background-color: #4b7182;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    /*align-content: flex-start;*/
+    overflow: auto;
+
+}

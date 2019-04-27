@@ -1,5 +1,5 @@
 import React from 'react';
-import './navbar.css';
+import './style.css';
 
 const Navbar = props => <nav className="navbar navbar-light bg-light clickyNav">{props.children}</nav>
 
