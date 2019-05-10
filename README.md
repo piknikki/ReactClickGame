@@ -11,4 +11,4 @@ The user is given 12 images and instructed to just start clicking but don't clic
 * serviceWorker is used, to help load faster
 
 # Link to live app
-
+https://thawing-caverns-69795.herokuapp.com/
